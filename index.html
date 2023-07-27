@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbershop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <a class="header-logo" href="#">
+          <svg width="69" height="55">
+            <use href="./images/symbol-defs.svg#icon-Logo"></use>
+          </svg>
+        </a>
+        <button
+          class="button-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+          data-open-modal
+        >
+          <svg width="40" height="40" aria-label="mobile menu">
+            <use
+              class="icon-menu"
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+            <use
+              class="icon-close"
+              href="./images/symbol-defs.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="over is-hidden" data-backdrop>
+          <div class="menu-container" id="menu-container" data-menu>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a id="about-link" href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a id="prices-link" href="#prices" class="nav-link"
+                    >Services and Prices</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a id="masters-link" href="#masters" class="nav-link"
+                    >Barbers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a id="contacts-link" href="#contacts" class="nav-link"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="header-record">
+              <a
+                class="record-button"
+                aria-controls="page_footer"
+                href="#footer"
+                >Book a Service</a
+              >
+              <a href="tel:+380441111111" class="record-link"
+                >+38 044 111 11 11</a
+              >
+            </div>
+            <ul class="social-list">
+              <li class="social-item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="social-link before"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-item">
+                <a
+                  href="https://www.youtube.com/"
+                  class="social-link"
+                  target="_blank"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrapper">
+          <div class="sidebar">
+            <ul class="sidebar-block">
+              <li>
+                <a
+                  class="sidebar-link sidebar-line"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidebar-link"
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hero-container">
+            <button class="prev-button button-slider">Previous</button>
+            <button class="next-button button-slider">Next</button>
+            <div class="nav-dots">
+              <svg class="nav-dot" data-slide="1">
+                <use href="./images/symbol-defs.svg#icon-dot-line"></use>
+              </svg>
+              <svg class="nav-dot" data-slide="2">
+                <use href="./images/symbol-defs.svg#icon-dot-line"></use>
+              </svg>
+              <svg class="nav-dot" data-slide="3">
+                <use href="./images/symbol-defs.svg#icon-dot-line"></use>
+              </svg>
+            </div>
+            <div class="slider-overlay">
+              <ul>
+                <li class="panel" data-slide="1">
+                  <picture>
+                    <source
+                      media="(min-width:1280px )"
+                      srcset="
+                        ./images/slider_img3_desktop.jpg   1x,
+                        ./images/slider_img3_desktop@2.jpg 2x,
+                        ./images/slider_img3_desktop@2.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width:768px )"
+                      srcset="
+                        ./images/slider_img3_tablet.jpg    1x,
+                        ./images/slider_img3_tablet@2x.jpg 2x,
+                        ./images/slider_img3_tablet@2x.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/slider_img3_mobile.jpg    1x,
+                        ./images/slider_img3_mobile@2x.jpg 2x,
+                        ./images/slider_img3_mobile@2x.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="hero-image"
+                      src="./images/slider_img3_desktop.jpg "
+                      alt="фото"
+                      srcset="
+                        ./images/slider_img3_mobile.jpg     480w,
+                        ./images/slider_img3_mobile@2x.jpg  960w,
+                        ./images/slider_img3_tablet.jpg     609w,
+                        ./images/slider_img3_tablet@2x.jpg 1218w,
+                        ./images/slider_img3_desktop.jpg   1125w,
+                        ./images/slider_img3_desktop@2.jpg 2250w
+                      "
+                      sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                      width="270"
+                      height="445"
+                    />
+                  </picture>
+                </li>
+                <li class="panel" data-slide="2">
+                  <picture>
+                    <source
+                      media="(min-width:1280px )"
+                      srcset="
+                        ./images/slider_img2_desktop.jpg   1x,
+                        ./images/slider_img2_desktop@2.jpg 2x,
+                        ./images/slider_img2_desktop@2.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width:768px )"
+                      srcset="
+                        ./images/slider_img2_tablet.jpg    1x,
+                        ./images/slider_img2_tablet@2x.jpg 2x,
+                        ./images/slider_img2_tablet@2x.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/slider_img2_mobile.jpg    1x,
+                        ./images/slider_img2_mobile@2x.jpg 2x,
+                        ./images/slider_img2_mobile@2x.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="hero-image"
+                      src="./images/slider_img2_desktop.jpg "
+                      alt="фото"
+                      srcset="
+                        ./images/slider_img2_mobile.jpg     480w,
+                        ./images/slider_img2_mobile@2x.jpg  960w,
+                        ./images/slider_img2_tablet.jpg     609w,
+                        ./images/slider_img2_tablet@2x.jpg 1218w,
+                        ./images/slider_img2_desktop.jpg   1125w,
+                        ./images/slider_img2_desktop@2.jpg 2250w
+                      "
+                      sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                      width="270"
+                      height="445"
+                    />
+                  </picture>
+                </li>
+                <li class="panel" data-slide="3">
+                  <picture>
+                    <source
+                      media="(min-width:1280px )"
+                      srcset="
+                        ./images/slider_img1_desktop.jpg   1x,
+                        ./images/slider_img1_desktop@2.jpg 2x,
+                        ./images/slider_img1_desktop@2.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width:768px )"
+                      srcset="
+                        ./images/slider_img1_tablet.jpg    1x,
+                        ./images/slider_img1_tablet@2x.jpg 2x,
+                        ./images/slider_img1_tablet@2x.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/slider_img1_mobile.jpg    1x,
+                        ./images/slider_img1_mobile@2x.jpg 2x,
+                        ./images/slider_img1_mobile@2x.jpg 3x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="hero-image"
+                      src="./images/slider_img1_desktop.jpg "
+                      alt="фото"
+                      srcset="
+                        ./images/slider_img1_mobile.jpg     480w,
+                        ./images/slider_img1_mobile@2x.jpg  960w,
+                        ./images/slider_img1_tablet.jpg     609w,
+                        ./images/slider_img1_tablet@2x.jpg 1218w,
+                        ./images/slider_img1_desktop.jpg   1125w,
+                        ./images/slider_img1_desktop@2.jpg 2250w
+                      "
+                      sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                      width="270"
+                      height="445"
+                    />
+                  </picture>
+                </li>
+              </ul>
+            </div>
+            <div class="hero-info">
+              <p class="hero-topic">A hair salon for men in Kyiv</p>
+              <h1 class="hero-title">BarberShop</h1>
+              <p class="hero-description">
+                We are experts in trendy men`s haircuts. We work quickly,
+                carefully and with style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about section" id="about">
+        <div class="container">
+          <ul class="about-list">
+            <li class="about-item">
+              <picture>
+                <source
+                  media="(min-width:1280px )"
+                  srcset="
+                    ./images/photo1_270.jpg    1x,
+                    ./images/photo1_270@2x.jpg 2x,
+                    ./images/photo1_270@2x.jpg 3x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/photo1_330.jpg    1x,
+                    ./images/photo1_330@2x.jpg 2x,
+                    ./images/photo1_330@2x.jpg 3x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-image"
+                  src="./images/photo1_270.jpg "
+                  alt="фото"
+                  srcset="
+                    ./images/photo1_270.jpg    270w,
+                    ./images/photo1_330.jpg    330w,
+                    ./images/photo1_270@2x.jpg 540w,
+                    ./images/photo1_330@2x.jpg 660w
+                  "
+                  sizes="(min-width:1280px) 270px, (min-width:768px) 330px, 100vw"
+                  width="270"
+                  height="445"
+                />
+              </picture>
+            </li>
+            <li class="about-item">
+              <picture>
+                <source
+                  media="(min-width:1280px )"
+                  srcset="
+                    ./images/photo2_270.jpg    1x,
+                    ./images/photo2_270@2x.jpg 2x,
+                    ./images/photo2_270@2x.jpg 3x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/photo2_330.jpg    1x,
+                    ./images/photo2_330@2x.jpg 2x,
+                    ./images/photo2_330@2x.jpg 3x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-image"
+                  src="./images/photo2_270.jpg "
+                  alt="фото"
+                  srcset="
+                    ./images/photo2_270.jpg    270w,
+                    ./images/photo2_330.jpg    330w,
+                    ./images/photo2_270@2x.jpg 540w,
+                    ./images/photo2_330@2x.jpg 660w
+                  "
+                  sizes="(min-width:1280px) 270px, (min-width:768px) 330px, 100vw"
+                  width="270"
+                  height="445"
+                />
+              </picture>
+            </li>
+          </ul>
+
+          <div class="content">
+            <p class="content-title">About</p>
+            <h2>
+              Best Barbershop <br />
+              in Kyiv
+            </h2>
+            <p class="text-1">
+              If you want to add more confidence to your image, you should
+              definitely visit us.
+            </p>
+            <p class="text-2">
+              We are a team that never stops at what has been achieved and are
+              thirsty for changes. And when you fall into the hands of our
+              master, you will never be the same again. We are a team that is
+              always "on the same wave" with clients. Therefore, we are always
+              ready to improve everyone who comes to us!
+            </p>
+
+            <a class="about-button" aria-controls="page_footer" href="#footer"
+              >Book a Service</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Services and Prices -->
+      <section class="prices" id="prices">
+        <div class="container">
+          <h2 class="group-title">Spend time with the best masters</h2>
+          <p class="price-title">Services and Prices</p>
+          <div class="price-list">
+            <ul class="price-item">
+              <li class="elem">
+                Men's Haircut<span class="underline">from 300 ₴</span>
+              </li>
+              <li class="elem">
+                Beard Trim <span class="underline">from 200 ₴</span>
+              </li>
+              <li class="elem">
+                Mustache Trim <span class="underline">from 200 ₴</span>
+              </li>
+              <li class="elem">
+                Straight Razor Shave
+                <span class="underline">from 200 ₴</span>
+              </li>
+            </ul>
+            <ul class="price-item">
+              <li class="elem">
+                Trainee Haircut <span class="underline">from 100 ₴</span>
+              </li>
+              <li class="elem">
+                Стрижка под насадку <span class="underline">from 200 ₴</span>
+              </li>
+              <li class="elem">
+                Children’s haircut (0-12 y.o.)
+                <span class="underline">from 300 ₴</span>
+              </li>
+              <li class="elem">
+                Gray Coverage <span class="underline">from 300 ₴</span>
+              </li>
+            </ul>
+          </div>
+          <a class="price-btn" aria-controls="page_footer" href="#footer"
+            >Book a Service</a
+          >
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="benefits">
+        <div class="container">
+          <div class="wrap">
+            <p class="subject">Old traditional school</p>
+            <h2 class="benefits-title">Why do they come to us?</h2>
+            <p class="benefits-text">
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
+            </p>
+          </div>
+          <ul class="benefits-items">
+            <li class="benefits-item">
+              <h2 class="number">600</h2>
+              <p class="item-text">satisfied customers per day</p>
+            </li>
+            <li class="benefits-item">
+              <h2 class="number">50</h2>
+              <p class="item-text">awards for excellent service</p>
+            </li>
+            <li class="benefits-item">
+              <h2 class="number">20</h2>
+              <p class="item-text">best barbers in Kyiv</p>
+            </li>
+            <li class="benefits-item">
+              <h2 class="number">100</h2>
+              <p class="item-text">gifts for regular customers</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Barbers-->
+      <section class="masters" id="masters">
+        <div class="container">
+          <p class="text">for true enjoyers of the atmosphere</p>
+          <h2 class="title">Our Barbers</h2>
+          <ul class="masters-list">
+            <li class="card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/img1_418.jpg    1x,
+                    ./images/img1_418@2x.jpg 2x,
+                    ./images/img1_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/img1_370.jpg    1x,
+                    ./images/img1_370@2x.jpg 2x,
+                    ./images/img1_370@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/img1_450.jpg    1x,
+                    ./images/img1_450@2x.jpg 2x,
+                    ./images/img1_450@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/img1_370.jpg     370w,
+                    ./images/img1_450.jpg     450w,
+                    ./images/img1_418.jpg     418w,
+                    ./images/img1_370@2x.jpg  540w,
+                    ./images/img1_450@2x.jpg  660w,
+                    ./images/img1_418@2x.jpg  836w,
+                    ./images/img1_370@2x.jpg  810w,
+                    ./images/img1_450@2x.jpg  990w,
+                    ./images/img1_418@2x.jpg 1254w
+                  "
+                  src="./images/img1_370.jpg "
+                  sizes="(min-width: 1280px) 370px, (min-width: 768px) 450px, 418px"
+                  alt="barber"
+                />
+              </picture>
+              <h2 class="card-title">John Smith</h2>
+              <p class="card-text">Extreme Barber</p>
+              <ul class="icon-list">
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-twitter"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-linkedin"
+                      ></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/img2_418.jpg    1x,
+                    ./images/img2_418@2x.jpg 2x,
+                    ./images/img2_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/img2_370.jpg    1x,
+                    ./images/img2_370@2x.jpg 2x,
+                    ./images/img2_370@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/img2_450.jpg    1x,
+                    ./images/img2_450@2x.jpg 2x,
+                    ./images/img2_450@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/img2_370.jpg     370w,
+                    ./images/img2_450.jpg     450w,
+                    ./images/img2_418.jpg     418w,
+                    ./images/img2_370@2x.jpg  540w,
+                    ./images/img2_450@2x.jpg  660w,
+                    ./images/img2_418@2x.jpg  836w,
+                    ./images/img2_370@2x.jpg  810w,
+                    ./images/img2_450@2x.jpg  990w,
+                    ./images/img2_418@2x.jpg 1254w
+                  "
+                  src="./images/img2_370.jpg "
+                  sizes="(min-width: 1280px) 370px, (min-width: 768px) 450px, 418px"
+                  alt="barber"
+                />
+              </picture>
+              <h2 class="card-title">Michele Doe</h2>
+              <p class="card-text">Extreme Barber</p>
+              <ul class="icon-list">
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-twitter"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-linkedin"
+                      ></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/img3_418.jpg    1x,
+                    ./images/img3_418@2x.jpg 2x,
+                    ./images/img3_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/img3_370.jpg    1x,
+                    ./images/img3_370@2x.jpg 2x,
+                    ./images/img3_370@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/img3_450.jpg    1x,
+                    ./images/img3_450@2x.jpg 2x,
+                    ./images/img3_450@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/img3_370.jpg     370w,
+                    ./images/img3_450.jpg     450w,
+                    ./images/img3_418.jpg     418w,
+                    ./images/img3_370@2x.jpg  540w,
+                    ./images/img3_450@2x.jpg  660w,
+                    ./images/img3_418@2x.jpg  836w,
+                    ./images/img3_370@2x.jpg  810w,
+                    ./images/img3_450@2x.jpg  990w,
+                    ./images/img3_418@2x.jpg 1254w
+                  "
+                  src="./images/img3_370.jpg "
+                  sizes="(min-width: 1280px) 370px, (min-width: 768px) 450px, 418px"
+                  alt="barber"
+                />
+              </picture>
+              <h2 class="card-title">Alan Black</h2>
+              <p class="card-text">Extreme Barber</p>
+              <ul class="icon-list">
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-twitter"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a target="_blank" href="#"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-linkedin"
+                      ></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Portfolio-->
+      <section class="portfolio">
+        <div class="container">
+          <p class="portfolio-title">In Latin, "barba" means "beard"</p>
+
+          <ul class="portfolio-list">
+            <li class="portfolio-item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/rectangle25_418.jpg    1x,
+                    ./images/rectangle25_418@2x.jpg 2x,
+                    ./images/rectangle25_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle25_270.jpg    1x,
+                    ./images/rectangle25_270@2x.jpg 2x,
+                    ./images/rectangle25_270@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle25_330.jpg    1x,
+                    ./images/rectangle25_330@2x.jpg 2x,
+                    ./images/rectangle25_330@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/rectangle25_270.jpg     270w,
+                    ./images/rectangle25_330.jpg     330w,
+                    ./images/rectangle25_418.jpg     418w,
+                    ./images/rectangle25_270@2x.jpg  540w,
+                    ./images/rectangle25_330@2x.jpg  660w,
+                    ./images/rectangle25_418@2x.jpg  836w,
+                    ./images/rectangle25_270@2x.jpg  810w,
+                    ./images/rectangle25_330@2x.jpg  990w,
+                    ./images/rectangle25_418@2x.jpg 1254w
+                  "
+                  src="./images/rectangle25_418.jpg "
+                  sizes="(min-width: 1280px) 270px, (min-width: 768px) 330px, 418px"
+                  alt="in work"
+                />
+              </picture>
+            </li>
+            <li class="portfolio-item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/rectangle26_418.jpg    1x,
+                    ./images/rectangle26_418@2x.jpg 2x,
+                    ./images/rectangle26_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle26_270.jpg    1x,
+                    ./images/rectangle26_270@2x.jpg 2x,
+                    ./images/rectangle26_270@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle26_330.jpg    1x,
+                    ./images/rectangle26_330@2x.jpg 2x,
+                    ./images/rectangle26_330@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/rectangle26_270.jpg     270w,
+                    ./images/rectangle26_330.jpg     330w,
+                    ./images/rectangle26_418.jpg     418w,
+                    ./images/rectangle26_270@2x.jpg  540w,
+                    ./images/rectangle26_330@2x.jpg  660w,
+                    ./images/rectangle26_418@2x.jpg  836w,
+                    ./images/rectangle26_270@2x.jpg  810w,
+                    ./images/rectangle26_330@2x.jpg  990w,
+                    ./images/rectangle26_418@2x.jpg 1254w
+                  "
+                  src="./images/rectangle26_418.jpg "
+                  sizes="(min-width: 1280px) 270px, (min-width: 768px) 330px, 418px"
+                  alt="in work"
+                />
+              </picture>
+            </li>
+            <li class="portfolio-item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/rectangle27_418.jpg    1x,
+                    ./images/rectangle27_418@2x.jpg 2x,
+                    ./images/rectangle27_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle27_270.jpg    1x,
+                    ./images/rectangle27_270@2x.jpg 2x,
+                    ./images/rectangle27_270@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle27_330.jpg    1x,
+                    ./images/rectangle27_330@2x.jpg 2x,
+                    ./images/rectangle27_330@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/rectangle27_270.jpg     270w,
+                    ./images/rectangle27_330.jpg     330w,
+                    ./images/rectangle27_418.jpg     418w,
+                    ./images/rectangle27_270@2x.jpg  540w,
+                    ./images/rectangle27_330@2x.jpg  660w,
+                    ./images/rectangle27_418@2x.jpg  836w,
+                    ./images/rectangle27_270@2x.jpg  810w,
+                    ./images/rectangle27_330@2x.jpg  990w,
+                    ./images/rectangle27_418@2x.jpg 1254w
+                  "
+                  src="./images/rectangle27_418.jpg "
+                  sizes="(min-width: 1280px) 270px, (min-width: 768px) 330px, 418px"
+                  alt="in work"
+                />
+              </picture>
+            </li>
+            <li class="portfolio-item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/rectangle28_418.jpg    1x,
+                    ./images/rectangle28_418@2x.jpg 2x,
+                    ./images/rectangle28_418@2x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle28_270.jpg    1x,
+                    ./images/rectangle28_270@2x.jpg 2x,
+                    ./images/rectangle28_270@2x.jpg 3x
+                  "
+                  media="(min-width: 1280px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/rectangle28_330.jpg    1x,
+                    ./images/rectangle28_330@2x.jpg 2x,
+                    ./images/rectangle28_330@2x.jpg 3x
+                  "
+                  media="(min-width: 768px) "
+                  type="image/jpg"
+                />
+                <img
+                  srcset="
+                    ./images/rectangle28_270.jpg     270w,
+                    ./images/rectangle28_330.jpg     330w,
+                    ./images/rectangle28_418.jpg     418w,
+                    ./images/rectangle28_270@2x.jpg  540w,
+                    ./images/rectangle28_330@2x.jpg  660w,
+                    ./images/rectangle28_418@2x.jpg  836w,
+                    ./images/rectangle28_270@2x.jpg  810w,
+                    ./images/rectangle28_330@2x.jpg  990w,
+                    ./images/rectangle28_418@2x.jpg 1254w
+                  "
+                  src="./images/rectangle28_418.jpg "
+                  sizes="(min-width: 1280px) 270px, (min-width: 768px) 330px, 418px"
+                  alt="in work"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer connection" id="footer">
+      <section id="contacts" class="connection-item">
+        <div class="container">
+          <h2 class="section-title">Book a Service</h2>
+          <form action="" class="contacts-form" id="form">
+            <div class="form-wrapper">
+              <label class="contacts-form-label">
+                <input
+                  type="text"
+                  class="contacts-form-input"
+                  placeholder=" "
+                  required
+                  minlength="3"
+                  maxlength="12"
+                />
+                <span class="form-input-label">Name*</span>
+              </label>
+              <label class="contacts-form-label">
+                <input
+                  type="tel"
+                  class="contacts-form-input"
+                  placeholder=" "
+                  required
+                />
+                <span class="form-input-label">Phone*</span>
+              </label>
+            </div>
+            <label class="contacts-form-label">
+              <textarea
+                name="feedback"
+                class="contacts-form-input textarea"
+                rows="5"
+                placeholder=" "
+              ></textarea>
+              <span class="form-input-label label-textarea">Message</span>
+            </label>
+            <button type="submit" class="cont-btn">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="connection-item">
+        <div class="container">
+          <div class="list">
+            <h2 class="contacts-title">Contacts</h2>
+            <ul class="nav">
+              <li class="item">
+                <a
+                  class="adres"
+                  href="https://www.google.com/maps/place/Voloshkova+St,+7,+Bucha,+Kyivs'ka+oblast,+Ukraina,+08292/@50.5641119,30.1985245,17z/data=!3m1!4b1!4m5!3m4!1s0x472b30335cb67c31:0xdb299890f0c122ba!8m2!3d50.5641119!4d30.2007132"
+                  target="_blank"
+                  ><svg class="icon" width="24" height="24">
+                    <use
+                      href="./images/symbol-defs.svg#icon-map-pin"
+                    ></use></svg
+                  >Voloshkova St, 7А Kyiv, 08132</a
+                >
+              </li>
+              <li class="item">
+                <a class="phone" href="tel:+38 044 111 11 11"
+                  ><svg class="icon" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-phone"></use></svg
+                  >+38 044 111 11 11</a
+                >
+              </li>
+              <li class="item">
+                <a class="email" href="mailto:barbershop@email.com"
+                  ><svg class="icon" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-mail"></use></svg
+                  >barbershop@email.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="information">
+            <p class="grafic">working hours</p>
+            <p class="text">Every day from 9:00 to 22:00</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <div class="after-footer">
+      <p class="copyright">
+        <svg class="copyright-icon" width="12" height="12">
+          <use href="./images/symbol-defs.svg#icon-copyright"></use>
+        </svg>
+        Copyright 2020
+      </p>
+      <div class="links">
+        <a
+          target="_blank"
+          href="https://www.instagram.com/"
+          class="instagram-link"
+          >Instagram</a
+        >
+        <a target="_blank" href="https://www.youtube.com/" class="youtube-link"
+          >Youtube</a
+        >
+      </div>
+    </div>
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/menu.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./js/slider.js" type="module"></script>
+  </body>
+</html>

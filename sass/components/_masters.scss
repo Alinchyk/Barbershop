@@ -1,0 +1,108 @@
+.masters {
+  background-color: #f7f7f7;
+
+  .text {
+    color: $black;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-left: calc(111px - 31px);
+    position: relative;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      padding-left: calc(111px - 31px);
+    }
+    @media screen and (min-width: 1280px) {
+      padding-left: calc(135px - 55px);
+    }
+  }
+  .text::before {
+    background: url(/images/symbol-defs.svg#icon-Rectangle_5);
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background: $black;
+    margin-right: 20px;
+    top: 50%;
+    left: 0;
+  }
+  .title {
+    color: $black;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    margin-bottom: 44px;
+    text-align: start;
+  }
+
+  .masters-list {
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  .masters-list img {
+    margin: 0 auto;
+  }
+
+  .card-title {
+    color: $black;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-top: 30px;
+    margin-bottom: 8px;
+  }
+  .card-text {
+    color: $accent_color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+  .icon-list {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 1279px) {
+      &:not(:last-child) {
+        margin-bottom: 64px;
+      }
+    }
+  }
+  .icon-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: $white;
+    border-radius: 50%;
+    outline: none;
+  }
+  .icon-list svg {
+    fill: $black;
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+      @extend %transition;
+      transform: scaleX(1.1);
+      cursor: pointer;
+    }
+  }
+}

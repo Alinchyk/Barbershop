@@ -1,0 +1,52 @@
+.portfolio {
+  .portfolio-title {
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.91;
+    letter-spacing: 0.1em;
+    color: $black;
+    text-transform: uppercase;
+    padding-left: calc(111px - 31px);
+    position: relative;
+    margin-bottom: 44px;
+    @media screen and (min-width: 768px) {
+      padding-left: calc(111px - 31px);
+      line-height: 1.36;
+    }
+    @media screen and (min-width: 1280px) {
+      padding-left: calc(135px - 55px);
+    }
+  }
+
+  .portfolio-title::before {
+    background: url(/images/symbol-defs.svg#icon-Rectangle_5);
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background: $black;
+    margin-right: 20px;
+    top: 50%;
+    left: 0;
+    @media screen and (max-width: 767px) {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      background: $black;
+      margin-right: 20px;
+      top: 25%;
+      left: 0;
+    }
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}

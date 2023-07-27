@@ -1,0 +1,153 @@
+.about {
+  .container {
+    display: flex;
+  }
+
+  .about-list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 30px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-right: 64px;
+    }
+  }
+
+  .about-item {
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover .about__image,
+    &:focus .about__image {
+      transform: scale(1.15);
+    }
+  }
+
+  .about-image {
+    @media screen and (min-width: 768px) {
+      min-width: 330px;
+      height: 235px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      min-width: 270px;
+      height: 445px;
+    }
+  }
+
+  .content {
+    min-width: 330px;
+    .content-title {
+      color: $black;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        padding-left: calc(111px - 31px);
+      }
+      @media screen and (min-width: 768px) {
+        padding-left: calc(110px - 30px);
+      }
+      @media screen and (min-width: 1280px) {
+        padding-left: calc(144px - 64px);
+      }
+    }
+    .content-title::before {
+      background: url(/images/symbol-defs.svg#icon-Rectangle_5);
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      background: $black;
+      margin-right: 20px;
+      top: 50%;
+      left: 0;
+    }
+  }
+  .content h2 {
+    color: $black;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    @media screen and (max-width: 1279px) {
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+  .text-1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: $text_color;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1280px) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  .text-2 {
+    color: $text_color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+  }
+  .about-button {
+    width: 160px;
+    height: 40px;
+    left: 689px;
+    top: 1211px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 194px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $black;
+    border-radius: 25px;
+    border: 1px solid$accent_color;
+    background-color: transparent;
+    transition: background-color 250ms linear, transform 250ms ease-in-out 250ms;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      transform: scaleX(1.1);
+      cursor: pointer;
+      @extend %transition;
+    }
+  }
+}

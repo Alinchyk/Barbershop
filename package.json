@@ -1,0 +1,30 @@
+{
+  "name": "barbershop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url /Alinchyk/Barbershop/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alinchyk/Barbershop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alinchyk/Barbershop/issues"
+  },
+  "homepage": "https://github.com/Alinchyk/Barbershop",
+  "devDependencies": {
+    "cssnano": "^4.1.11",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.21"
+  },
+  "dependencies": {
+    "@parcel/optimizer-cssnano": "^2.8.3"
+  }
+}

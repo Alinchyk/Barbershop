@@ -1,0 +1,377 @@
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    max-width: 768px;
+    height: 680px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+.hero-container {
+  position: relative;
+  top: 0;
+
+  height: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #191c26;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 609px;
+    height: 680px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1125px;
+  }
+}
+
+.slider-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-overlay:after {
+  content: "";
+  position: absolute;
+  background: rgba(25, 28, 38, 0.2);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.panel {
+  position: absolute;
+  width: 480px;
+  height: 580px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 609px;
+    height: 680px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1125px;
+  }
+}
+
+.panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.panel._active {
+  z-index: 1;
+}
+
+.nav-dots {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    right: 39px;
+  }
+
+  @media screen and (min-width: 768px) {
+    right: 55px;
+  }
+}
+
+.nav-dot {
+  display: block;
+  width: 8px;
+  height: 2px;
+  background: $main_text_color;
+  cursor: pointer;
+}
+
+.nav-dot:not(:first-child) {
+  margin-top: 12px;
+}
+
+.nav-dot.active {
+  background: $white;
+  width: 18px;
+}
+
+.hero-info {
+  position: absolute;
+
+  top: 208px;
+  left: 31px;
+
+  width: 306px;
+  height: 189px;
+
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    width: 355px;
+    height: 163px;
+    top: 272px;
+    left: 120px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 500px;
+    height: 202px;
+
+    left: 100px;
+  }
+}
+
+.hero-info .hero-topic {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+
+  color: rgba(157, 164, 189, 0.6);
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  overflow: hidden;
+  text-align: start;
+}
+
+.hero-topic:before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.6);
+
+  @media screen and (min-width: 480px) {
+    width: 60px;
+  }
+}
+
+.hero-info .hero-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+  color: $white;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  @media screen and (min-width: 480px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 72px;
+    line-height: 1.18;
+  }
+}
+
+.hero-description {
+  color: $main_text_color;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    width: 480px;
+  }
+}
+
+.button-slider {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  color: rgba(157, 164, 189, 0.6);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  transition-property: color;
+  @extend %transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    outline: none;
+  }
+}
+
+.prev-button {
+  text-align: start;
+  position: absolute;
+
+  transform: translate(0%, -50%);
+  z-index: 3;
+
+  @media screen and (min-width: 768px) {
+    right: 119px;
+    bottom: 27px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 141px;
+  }
+
+  transition-property: color;
+  @extend %transition;
+
+  &:hover:after,
+  &:focus:after {
+    background-color: $white;
+  }
+}
+
+.next-button {
+  text-align: end;
+  position: absolute;
+
+  transform: translate(0%, -50%);
+  z-index: 3;
+
+  @media screen and (min-width: 768px) {
+    right: 33px;
+    bottom: 27px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 55px;
+  }
+
+  transition-property: color;
+  @extend %transition;
+
+  &:hover:after,
+  &:focus:after {
+    background-color: $white;
+  }
+}
+
+.prev-button:after,
+.next-button:after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  display: block;
+  cursor: pointer;
+  bottom: 0;
+  margin-top: 8px;
+  background-color: rgba(157, 164, 189, 0.6);
+  background-size: auto;
+}
+
+.sidebar {
+  background-color: $white;
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 159px;
+    height: 680px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 155px;
+  }
+}
+
+.sidebar-block {
+  display: flex;
+  width: 270px;
+  position: absolute;
+  transform: rotate(-90deg);
+
+  transform-origin: left center;
+
+  @media screen and (min-width: 768px) {
+    left: 76px;
+    bottom: 27px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 82px;
+  }
+}
+
+.sidebar-link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  color: $black;
+
+  transition-property: color;
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    color: $accent_color;
+  }
+}
+
+.sidebar-line {
+  margin-right: 40px;
+}
+
+.sidebar-line:before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 60px;
+  height: 1px;
+  background-color: $black;
+}
